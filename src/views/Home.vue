@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <p class="pa-1 subheading">Home Kib Waves</p>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+
+let SELF;
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "home-view",
+  components: {},
+  props: {},
+  data() {
+    return {
+      // .
+    };
+  },
+  methods: {
+    // .
+  },
+  computed: {},
+  watch: {},
+  beforeCreate() {
+    SELF = this;
+  },
+  created() {},
+  mounted() {}
+};
 </script>
+
+<style scoped>
+/*.*/
+</style>

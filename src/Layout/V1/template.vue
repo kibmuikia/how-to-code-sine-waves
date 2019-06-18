@@ -1,5 +1,5 @@
 <template>
-  <p class="pa-1 subheading">About Kib Waves</p>
+  <p class="pa-1 subheading">I am template</p>
 </template>
 
 <script>
@@ -9,7 +9,7 @@
 let SELF;
 
 export default {
-  name: "about-view",
+  name: "",
   components: {},
   props: {},
   data() {
