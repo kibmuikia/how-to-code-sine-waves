@@ -121,8 +121,8 @@ export default {
     return {
       drawer: null,
       links: [
-        { title: "Home", icon: "home", path: "/" },
-        { title: "About", icon: "question_answer", path: "/about" }
+        { title: "Home", icon: "home", path: "/" }
+        // { title: "About", icon: "question_answer", path: "/about" }
       ],
       currentyear: new Date().getFullYear()
     };
