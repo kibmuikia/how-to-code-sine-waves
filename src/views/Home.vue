@@ -23,6 +23,20 @@
           <canvas id="canvasKibWave" ref="canvasKibWaveRef"></canvas>
         </v-card>
       </v-flex>
+
+      <v-flex xs12 class="my-2">
+        <v-card>
+          <v-card-title>
+            <h3 class="title">Credits</h3>
+          </v-card-title>
+          <v-card-text>
+            <p>
+              This project has been forked from Njeri. More modifications to be
+              updated later.
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
