@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="grey lighten-3">
+  <v-container app fluid class="grey lighten-3">
     <!-- . -->
     <v-toolbar app fixed>
       <v-toolbar-title>Kib Waves</v-toolbar-title>
@@ -54,52 +54,45 @@
     </v-navigation-drawer>
     <!-- . -->
     <v-content>
-      <!-- <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          <v-flex text-xs-center>
-            <p class="subheading pa-1" color="info">
-              Content here
-            </p>
-          </v-flex>
-        </v-layout>
-      </v-container> -->
       <router-view></router-view>
     </v-content>
     <!-- . -->
     <v-footer height="auto" class="" app>
-      <v-card class="flex grey lighten-4" flat tile>
-        <v-card-title class="">
-          <strong class="subheading"
-            >Get connected with me on social networks!</strong
-          >
+      <v-card class="flex grey lighten-2 elevation-15" flat tile>
+        <v-card-text>
+          <v-layout row wrap align-center justify-space-around>
+            <v-flex xs12 md5>
+              <p class="subheading">
+                Get connected with me on social networks!
+              </p>
+            </v-flex>
+            <v-flex xs12 md5 class="">
+              <v-btn
+                class="mx-2 info right"
+                icon
+                href="https://www.instagram.com/kibmuikia/"
+                target="_blank"
+              >
+                <font-awesome-icon
+                  :icon="{ prefix: 'fab', iconName: 'instagram' }"
+                />
+              </v-btn>
+              <v-btn
+                class="mx-2 info right"
+                icon
+                href="https://twitter.com/MuikiaAllan"
+                target="_blank"
+              >
+                <font-awesome-icon
+                  :icon="{ prefix: 'fab', iconName: 'twitter' }"
+                />
+              </v-btn>
+            </v-flex>
+          </v-layout>
+        </v-card-text>
 
-          <v-spacer></v-spacer>
-
-          <v-btn
-            class="mx-2 info"
-            icon
-            href="https://twitter.com/MuikiaAllan"
-            target="_blank"
-          >
-            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" />
-          </v-btn>
-          <v-btn
-            class="mx-2 info"
-            icon
-            href="https://www.instagram.com/kibmuikia/"
-            target="_blank"
-          >
-            <font-awesome-icon
-              :icon="{ prefix: 'fab', iconName: 'instagram' }"
-            />
-          </v-btn>
-        </v-card-title>
-
-        <v-card-actions class=" justify-center">
-          <p>
-            &copy;{{ currentyear }} — Developed by
-            <strong>Muikia Allan</strong>
-          </p>
+        <v-card-actions class="justify-center">
+          <p>&copy;{{ currentyear }} — Developed by Muikia Allan</p>
         </v-card-actions>
       </v-card>
     </v-footer>
