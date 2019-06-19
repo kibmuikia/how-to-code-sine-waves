@@ -24,15 +24,29 @@
         </v-card>
       </v-flex>
 
-      <v-flex xs12 class="my-2">
+      <v-flex xs12 md6 offset-m3 class="my-2 text-xs-center">
         <v-card>
           <v-card-title>
             <h3 class="title">Credits</h3>
           </v-card-title>
           <v-card-text>
             <p>
-              This project has been forked from Njeri. More modifications to be
-              updated later.
+              This project has been forked from,
+              <v-btn
+                small
+                flat
+                href="https://github.com/njerimaureen182"
+                target="_blank"
+                color="info"
+              >
+                <font-awesome-icon
+                  :icon="{ prefix: 'fab', iconName: 'github' }"
+                />
+                <span class="px-1">Maureen Njeri</span> </v-btn
+              >.
+            </p>
+            <p>
+              More modifications to be updated later.
             </p>
           </v-card-text>
         </v-card>
@@ -61,7 +75,8 @@ export default {
           y: 0,
           length: 0.01,
           amplitude: 100,
-          frequency: 0.01
+          frequency: 0.01,
+          wrapperWidth: 350
         },
         strokeColor: {
           h: 200,
@@ -97,7 +112,7 @@ export default {
       let kibcanvas = document.querySelector("canvas");
       let c = kibcanvas.getContext("2d");
 
-      kibcanvas.width = 400; // innerWidth
+      kibcanvas.width = SELF.properties.wave.wrapperWidth; // innerWidth
       kibcanvas.height = 300; // innerHeight
       // SELF.status = `height[ ${kibcanvas.height} ], width[ ${
       //   kibcanvas.width
@@ -109,6 +124,7 @@ export default {
       waveFolder.add(SELF.properties.wave, "length", -0.01, 0.01);
       waveFolder.add(SELF.properties.wave, "amplitude", -300, 300);
       waveFolder.add(SELF.properties.wave, "frequency", -0.01, 1);
+      waveFolder.add(SELF.properties.wave, "wrapperWidth", 200, 600);
 
       let strokeFolder = gui.addFolder("stroke");
       strokeFolder.add(SELF.properties.strokeColor, "h", 0, 255);
@@ -130,7 +146,6 @@ export default {
         }, ${SELF.properties.backgroundColor.b}, ${
           SELF.properties.backgroundColor.a
         })`;
-        // c.fillStyle = `rgba(255,255,255,1)`;
 
         // c.rect(0, 0, kibcanvaswrapheight, 300);
         // c.stroke();

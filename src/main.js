@@ -6,11 +6,16 @@ import store from "./store";
 import "./registerServiceWorker";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faInstagram,
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faTwitter);
 library.add(faInstagram);
+library.add(faGithub);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
